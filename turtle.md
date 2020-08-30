@@ -38,13 +38,16 @@
 ```python
   wn = turtle.Screen()
   wn.bgcolor('black')
+  ```
+ turtle 클래스의 Screen을 "wn"이라 지정합니다.<br>(이렇게 하는 이유 : 이렇게 지정한 이후 turtle.Screen()이라고 쓸 것을 wn 한 단어로 쓸 수 있습니다.)<br>
+ 배경을 검은색으로 지정합니다.<br>
+ ```python
   Albert = turtle.Turtle()
   Albert.speed(0)
   Albert.color('white')
   rotate=int(360)
 ```
-turtle 클래스의 Screen을 "wn"이라 지정합니다.<br>(이렇게 하는 이유 : 이렇게 지정한 이후 turtle.Screen()이라고 쓸 것을 wn 한 단어로 쓸 수 있습니다.)<br>
-배경색을 검은색으로 지정 후 "Albert"라는 것을 turtle.Turtle로 지정합니다.(위 이유와 마친가지)<br>
+"Albert"라는 것을 turtle.Turtle로 지정합니다.(위 이유와 마친가지)<br>
 Albert를 정지로 해놓고(speed(0)) 색은 흰색으로 지정합니다.
 ```python
 def drawCircles(t,size):
@@ -55,13 +58,43 @@ def drawSpecial(t,size,repeat):
   for i in range (repeat):
     drawCircles(t,size)
     t.right(360/repeat)
-drawSpecial(Albert,100,10)
 
 ```
 "drawCircles"와 "drawSpecial"함수를 만든 후 함수를 실행합니다.<br> 
 "drawCircles"함수에서는 원의 크기를 점점 작게 "drawSpecial"함수에서는 "drawCircles"함수가 끝난후 오른쪽으로 얼만큼 회전할지를 지정하여 그립니다.<br>
-이후에는 Steve(노란색), Barry(파란색), Terry(주황색), Will(분홍색)을 Albert(하얀색)과 형식을 똑같이 맞춰주면 그림은 완성이 됩니다.<br>
-<img src="turtle1_Albert.jpg" width="500px"/>
+```python
+drawSpecial(Albert,100,10)
+```
+"draqSpecial"함수에 Albert, size와 repeat 값을 넣어주고 실행합니다.<br>
+아래의 그림과 같은 결과값이 나옵니다.<br>
+<img src="turtle1_Albert.jpg" width="500px"/><br>
+```python
+Steve = turtle.Turtle()
+Steve.speed(0)
+Steve.color('yellow')
+rotate=int(90)
+```
+Albert와 색만 다르게 Steve 지정합니다.<br>
+Steve의 색은 노란색으로 지정합니다.<br>
+```python
+def drawCircles(t,size):
+    for i in range(4):
+        t.circle(size)
+        size=size-10
+def drawSpecial(t,size,repeat):
+    for i in range (repeat):
+        drawCircles(t,size)
+        t.right(360/repeat)
+```
+Steve는 "drawCircles"함수의 range값을 4로 지정합니다. 점점 작은 원을 4개 그리고 "drawSpecial"함수로 넘어가게 합니다.<br>
+```python
+drawSpecial(Steve,100,10)
+```
+실행합니다.<br>
+아래의 그림과 같은 결과값이 나옵니다.<br>
+<img src="turtle1_Steve.jpg" width="500px"/><br>
+
+
 
 
 
