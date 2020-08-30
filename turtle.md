@@ -99,6 +99,8 @@ Barry는 파란색, Terry는 주황색, Will은 분홍색으로 진행합니다.
 <img src="turtle1_Terry.jpg" width="500px"/><br>
 <img src="turtle1_Will.jpg" width="500px"/><br>
 
+모든 코드를 이어붙여 동시에 실행하면 아래의 결과가 나옵니다.<br>
+<img src="turtle1_total.jpg" width="500px"/><br>
 
 
 
