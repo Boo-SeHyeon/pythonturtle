@@ -93,9 +93,11 @@ drawSpecial(Steve,100,10)
 실행합니다.<br>
 아래의 그림과 같은 결과값이 나옵니다.<br>
 <img src="turtle1_Steve.jpg" width="500px"/><br>
-
-
-
+Albert와 Steve를 기준으로 다른 turtle도 설정해줍니다.<br>
+Barry는 파란색, Terry는 주황색, Will은 분홍색으로 진행합니다.각 결과값은 아래의 그림과 같이 나옵니다.<br>
+<img src="turtle1_Barry.jpg" width="500px"/><br>
+<img src="turtle1_Terry.jpg" width="500px"/><br>
+<img src="turtle1_Will.jpg" width="500px"/><br>
 
 
 
