@@ -27,7 +27,7 @@
 ## 3. 실습 예제들 같이 풀어보기
 예제코드들이 각 주제당 3개가 있기 때문에 보고 취향에 맞는 것 골라서 참고하시면 될 것 같습니다.<br>
 
-### 3.1 'turtle' 실습1
+### 3.1.1 'turtle' 실습1
  ```python
    import turtle
    import math
@@ -98,8 +98,8 @@ drawSpecial(Ari,100,10)
 
 아래의 그림과 같은 결과값이 나옵니다.<br>
 <img src="turtle1_Steve.jpg" width="500px"/><br>
-Albert와 Steve를 기준으로 다른 turtle도 설정해줍니다.<br>
-Barry는 파란색, Terry는 주황색, Will은 분홍색으로 진행합니다.각 결과값은 아래의 그림과 같이 나옵니다.<br>
+Haedal과 Ari를 기준으로 다른 turtle도 설정해줍니다.<br>
+Bugi는 초록색, Saseumi는 주황색, Dugeun은 분홍색으로 진행합니다.각 결과값은 아래의 그림과 같이 나옵니다.<br>
 <img src="turtle1_Barry.jpg" width="500px"/><br>
 <img src="turtle1_Terry.jpg" width="500px"/><br>
 <img src="turtle1_Will.jpg" width="500px"/><br>
@@ -108,7 +108,11 @@ Barry는 파란색, Terry는 주황색, Will은 분홍색으로 진행합니다.
 <img src="turtle1_total.jpg" width="500px"/><br>
 
 
-### 3.2 'turtle' 실습2
+### 3.1.2 'turtle' 실습2
+
+### 3.1.3 'turtle' 실습3
 
 
+### 3.3.1
+### 3.3.2
 
