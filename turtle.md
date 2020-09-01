@@ -48,7 +48,7 @@
   rotate=int(360)
 ```
 해달프렌즈들로 그려봅시다.<br>
-
+<img src="Haedal.jpg " width="300px"/><br>
 "Haedal"를 turtle.Turtle로 지정합니다.(위 이유와 마친가지)<br>
 Haedal를 정지로 해놓고(speed(0)) 색은 흰색으로 지정합니다.
 ```python
