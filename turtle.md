@@ -42,13 +42,15 @@
  turtle 클래스의 Screen을 "wn"이라 지정합니다.<br>(이렇게 하는 이유 : 이렇게 지정한 이후 turtle.Screen()이라고 쓸 것을 wn 한 단어로 쓸 수 있습니다.)<br>
  배경을 검은색으로 지정합니다.<br>
  ```python
-  Albert = turtle.Turtle()
-  Albert.speed(0)
-  Albert.color('white')
+  Haedal = turtle.Turtle()
+  Haedal.speed(0)
+  Haedal.color('white')
   rotate=int(360)
 ```
-"Albert"라는 것을 turtle.Turtle로 지정합니다.(위 이유와 마친가지)<br>
-Albert를 정지로 해놓고(speed(0)) 색은 흰색으로 지정합니다.
+해달프렌즈들로 그려봅시다.<br>
+
+"Haedal"를 turtle.Turtle로 지정합니다.(위 이유와 마친가지)<br>
+Haedal를 정지로 해놓고(speed(0)) 색은 흰색으로 지정합니다.
 ```python
 def drawCircles(t,size):
     for i in range(10):
@@ -63,9 +65,9 @@ def drawSpecial(t,size,repeat):
 "drawCircles"와 "drawSpecial"함수를 만든 후 함수를 실행합니다.<br> 
 "drawCircles"함수에서는 원의 크기를 점점 작게 "drawSpecial"함수에서는 "drawCircles"함수가 끝난후 오른쪽으로 얼만큼 회전할지를 지정하여 그립니다.<br>
 ```python
-drawSpecial(Albert,100,10)
+drawSpecial(Haedal,100,10)
 ```
-"draqSpecial"함수에 Albert, size와 repeat 값을 넣어주고 실행합니다.<br>
+"draqSpecial"함수에 Haedal, size와 repeat 값을 넣어주고 실행합니다.<br>
 아래의 그림과 같은 결과값이 나옵니다.<br>
 <img src="turtle1_Albert.jpg" width="500px"/><br>
 ```python
