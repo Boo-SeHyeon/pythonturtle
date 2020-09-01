@@ -71,13 +71,15 @@ drawSpecial(Haedal,100,10)
 아래의 그림과 같은 결과값이 나옵니다.<br>
 <img src="turtle1_Albert.jpg" width="500px"/><br>
 ```python
-Steve = turtle.Turtle()
-Steve.speed(0)
-Steve.color('yellow')
+Ari = turtle.Turtle()
+Ari.speed(0)
+Ari.color('yellow')
 rotate=int(90)
 ```
-Albert와 색만 다르게 Steve 지정합니다.<br>
-Steve의 색은 노란색으로 지정합니다.<br>
+Ari로 그려봅시다.<br>
+<img src="Ari.jpg" width="300px"/><br>
+Haedal과 색만 다르게 Ari를 지정합니다.<br>
+Ari의 색은 노란색으로 지정합니다.<br>
 ```python
 def drawCircles(t,size):
     for i in range(4):
@@ -88,11 +90,12 @@ def drawSpecial(t,size,repeat):
         drawCircles(t,size)
         t.right(360/repeat)
 ```
-Steve는 "drawCircles"함수의 range값을 4로 지정합니다. 점점 작은 원을 4개 그리고 "drawSpecial"함수로 넘어가게 합니다.<br>
+Ari는 "drawCircles"함수의 range값을 4로 지정합니다. 점점 작은 원을 4개 그리고 "drawSpecial"함수로 넘어가게 합니다.<br>
 ```python
-drawSpecial(Steve,100,10)
+drawSpecial(Ari,100,10)
 ```
 실행합니다.<br>
+
 아래의 그림과 같은 결과값이 나옵니다.<br>
 <img src="turtle1_Steve.jpg" width="500px"/><br>
 Albert와 Steve를 기준으로 다른 turtle도 설정해줍니다.<br>
