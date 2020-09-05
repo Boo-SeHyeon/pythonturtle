@@ -226,8 +226,9 @@ screen.setworldcoordinates(screenMinX, screenMinY, screenMaxX, screenMaxY)
 brush_turtle = Turtle()
 brush_turtle.goto(0, 0)
 brush_turtle.speed(10)
+brush_turtle.shape("turtle")
 ```
-거북이의 위치와 속도를 지정해 줍니다.<br>
+거북이의 위치와 속도를 지정해 줍니다.shape("turtle")을 넣어 그림그리는 객체의 모양이 거북이 모양이 되도록 해줍니다.<br>
 
 ```python
 def on_screen_click(x, y):
@@ -249,11 +250,50 @@ class ColorPicker(Turtle):
         self.color("black", color)
         self.penup()
 
-        # hack to register click handler to instance method
         self.onclick(lambda x, y: self.handle_click(x, y))
+        
+        def draw(self):
+            self.setx(screenMinX + 110 + self.num * 30)
+            self.sety(screenMaxY - 20)
+            
+        def handle_click(self, x, y):
+            if self.color_name == "#F9F9F9":
+               brush_turtle.penup()
+               brush_turtle.color("black")
+            else:
+                brush_turtle.pendown()
+                brush_turtle.color(self.color_name)
 ```
-"ColorPicker" 클래스를 생성합니다. 이 클래스는 거북이의 색깔을 바꾸기 위한 클래스 입니다. 
+"ColorPicker" 클래스를 생성합니다. 이 클래스는 거북이의 색깔을 바꾸기 위한 클래스입니다. 색상바들의 모양을 'circle'로 기본색은 검정으로 설정해줍니다.<br>
+'draw'함수로 거북이의 위치를 설정해줍니다.<br>
+'handle_click'함수로 '#f9f9f9'의 색을 선택했을 때 거북이의 색을 검은색으로 바꾸고 그렇지 않을 때는 선택한 색으로 거북이가 바뀌게 합니다.<br>
 
+```python
+screen.tracer(0)
+
+ui_turtle = Turtle()
+ui_turtle.ht()
+ui_turtle.penup()
+ui_turtle.goto(screenMinX, screenMaxY - 23)
+ui_turtle.write("TurtleDraw!", align="left", font=("Courier", 10, "bold"))
+```
+거북이의 색을 선택할 수 있는 색상바를 만들어줍니다.<br>
+
+```python
+colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet", "black", "#F9F9F9"]
+color_pickers = [ColorPicker(color=c, num=i) for i, c in enumerate(colors)]
+for picker in color_pickers:
+    picker.draw()
+```
+여러가지 색깔들을 설정해줍니다. enumerate를 이용해 차례로 나열되게 만들어주고 color_pickers로 선택된 색깔로 거북이가 그려지게 만들어 줍니다.<br>
+
+```python
+screen.tracer(1)
+done()
+```
+거북이가 따라가게 만들어주고 done()을 이용해 화면이 사라지지 않게 해줍니다.<br>
+다 완성하면 아래와 같은 화면이 실행됩니다.<br>
+<img src="turtle3_done.gif" width="600px"/>
 
 ### 3.3.1
 ### 3.3.2
