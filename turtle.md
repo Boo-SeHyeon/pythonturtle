@@ -202,17 +202,57 @@ screen.listen()
 turtle.done()
 ```
 listen()으로 입력된 키들을 실행할 수 있게 해주고 done()으로 그려진 거북이들을 화면에 계속 남아있게 해줍니다.<br>
-위의 코드를 실행하면 아래와 같은 실행창을 얻고 클릭하는대로 거북이가 그려지는 것을 확인할 수 있습니다.<br>
+위의 코드를 실행하면 아래와 같은 실행창을 얻고 클릭하는대로 그려지는 것을 확인할 수 있습니다.<br>
 <img src="turtle2_done.gif" width="600px"/>
 
-
-
-
-
-
-
-
 ### 3.1.3 'turtle' 실습3
+```python
+from turtle import *
+```
+위의 코드는 turtle모듈을 불러오고 turtle을 생략할 수 있게 해줍니다.<br>
+
+```python
+screen = Screen()
+screenMinX = -screen.window_width() / 2
+screenMinY = -screen.window_height() / 2
+screenMaxX = screen.window_width() / 2
+screenMaxY = screen.window_height() / 2
+
+screen.setworldcoordinates(screenMinX, screenMinY, screenMaxX, screenMaxY)
+```
+위의 코드를 작성하여 거북이가 그려지는 화면을 띄웠을 때 정중앙에 오도록 합니다.<br>
+
+```python
+brush_turtle = Turtle()
+brush_turtle.goto(0, 0)
+brush_turtle.speed(10)
+```
+거북이의 위치와 속도를 지정해 줍니다.<br>
+
+```python
+def on_screen_click(x, y):
+    if y < screenMaxY - 40:
+        brush_turtle.goto(x, y)
+        
+screen.onclick(on_screen_click)
+```
+"on_screen_clikck"함수를 생성하여 화면 위쪽보다 조금 아래부분에서만 작동하도록 설정해줍니다.<br>이렇게 하는 이유는 뒤에서 설명하겠습니다.<br>
+
+```python
+class ColorPicker(Turtle):
+    def __init__(self, color="red", num=0):
+        Turtle.__init__(self)
+        self.num = num
+        self.color_name = color
+        self.speed(0)
+        self.shape("circle")
+        self.color("black", color)
+        self.penup()
+
+        # hack to register click handler to instance method
+        self.onclick(lambda x, y: self.handle_click(x, y))
+```
+"ColorPicker" 클래스를 생성합니다. 이 클래스는 거북이의 색깔을 바꾸기 위한 클래스 입니다. 
 
 
 ### 3.3.1
