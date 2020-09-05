@@ -110,6 +110,107 @@ Bugi는 초록색, Saseumi는 주황색, Dugeun은 분홍색으로 진행합니�
 
 ### 3.1.2 'turtle' 실습2
 
+첫 번째 파일명을 myturtle.py로 설정합니다.<br>
+
+```python
+import turtle
+```
+turtle 실습이니만큼 turtle모듈을 가져옵니다.<br>
+
+```python
+class MyTurtle(turtle.Turtle):
+    def __init__(self, screen=turtle.Screen()):
+        turtle.Turtle.__init__(self)
+        self.hideturtle()
+```
+Myturtle 클래스를 만들어 init으로 클래스를 초기화하고 self.hideturtle()로 거북이를 보이지 않게 만들어줍니다.<br>
+
+```python
+def create_turtles(screen, n=10):
+    for i in range(n):
+        MyTurtle(screen)
+```        
+"create_turtles"함수를 생성합니다.화면에 거북이 10마리를 만들어줍니다.<br>
+
+```python
+def move_turtles(screen, dist=10, angle=4):
+    for i, turtle in enumerate(screen.turtles()):
+        turtle.left(angle * (1 + i))
+        turtle.forward(dist)
+        x, y = turtle.pos()
+        try:
+            turtle.color('black')
+        except:
+            pass
+```        
+"move_turtles"함수는 enumerate를 이용하여 거북이를 한마리씩 화면에서 아래 코드에 따라 움직이게 설정합니다.거리 dist=10, angle=4로 설정해줍니다.<br>
+turtle.left로 방향을 설정하고 turtle.forward로 이동할 거리를 지정해줍니다.<br>
+turtle.pos()는 현재 거북이의 위치를 지정합니다.turtle.color()에 원하는 색을 넣어줍니다.<br>
+
+```python
+writer = MyTurtle()
+writer.penup()
+writer.goto(0, 100)
+writer.write("Click Me!", font=("Arial", 30), align="center")
+```
+writer를 MyTurtle()클래스로 잡아줍니다.<br> penup()은 펜을 올려 그림이 그려지지 않게 합니다.그리고 맨 처음 시작화면을 설정해줍니다.<br>
+
+위의 파일을 작성하고 main.py이라는 또 다른 파일을 만들어줍니다.<br>
+```python
+import turtle
+from myturtle import MyTurtle, create_turtles, move_turtles, writer
+```
+main파일에서도 turtle모듈을 불러오고 아까 작성했던 myturtle파일에서 만들었던 함수들을 import합니다.<br>
+
+```python
+number_of_turtles = 10
+screen = turtle.Screen()
+```
+거북이의 수를 전역변수로 생성하고 screen을 지정합니다.<br>
+
+```python
+def draw_shape(x, y, n=20, clear=True):
+    if clear:
+        writer.clear()
+    screen.tracer(0)
+    for turtle in screen.turtles():
+        turtle.penup()
+        turtle.goto(x, y)
+        turtle.pendown()
+    screen.tracer(1)
+    for i in range(n):
+        screen.tracer(0)
+        move_turtles(screen)
+        screen.tracer(1)
+```
+"draw_shape"이란 함수를 생성합니다.<br>
+
+```python
+create_turtles(screen, number_of_turtles)
+draw_shape(0, -150, clear=False)
+```
+"create_turtles"와 "draw_shape"함수에 값을 넣고 불러옵니다.<br>
+```python
+screen.onclick(draw_shape)
+```
+screen.onclick은 누르면 "draw_shape"함수가 진행되도록 설정합니다.<br>
+
+```python
+screen.listen()
+turtle.done()
+```
+listen()으로 입력된 키들을 실행할 수 있게 해주고 done()으로 그려진 거북이들을 화면에 계속 남아있게 해줍니다.<br>
+위의 코드를 실행하면 아래와 같은 실행창을 얻고 클릭하는대로 거북이가 그려지는 것을 확인할 수 있습니다.<br>
+
+
+
+
+
+
+
+
+
+
 ### 3.1.3 'turtle' 실습3
 
 
