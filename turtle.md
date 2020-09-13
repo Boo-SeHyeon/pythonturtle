@@ -351,4 +351,48 @@ tkinter가 계속 실행할 수 있도록 mainloop를 지정합니다.mainloop�
 위의 코드를 실행하면 아래와 같은 결과창을 얻을 수 있습니다.<br>
 <img src="tkinter1_done.gif" width="600px"/>
 
+
+이번엔 인치로 주어진 값을 센티미터로 변환하는 변환기를 만들어봅시다.<br>
+
+```python
+from tkinter import*
+window=Tk()
+```
+'import*'로 tkinter전체 모듈을 가져오고 윈도우창을 생성해줍니다.
+
+```python
+def process():
+  result = float(e1.get()) * 2.54
+  l4 = Label(window, text="%s 센티미터"%result)
+  l4.grid(row=2, column=1)
+```
+process함수는 입력 인치값을 센티미터로 바꿔주기 위해 2.54를 곱해주는 함수입니다.
+```python 
+l1 = Label(window, text="인치를 센티미터로 변환하는 프로그램:")
+l1.grid(row=0, column=0, columnspan=2)
+l2 = Label(window, text="인치를 입력하시오:")
+l2.grid(row=1, column=0)
+```
+기본적인 틀을 만들어줍니다. 
+
+```python
+e1 = Entry(window)
+e1.grid(row=1, column=1)
+l3 = Label(window, text="변환결과:")
+l4 = Label(window, text="")
+l3.grid(row=2, column=0)
+l4.grid(row=2, column=1)
+```
+결과값을 보여주는 창을 만들어줍니다.<br>
+```python
+b1 = Button(window, text="변환", command=process)
+b1.grid(row=3, column=1)
+ 
+window.mainloop()
+```
+process함수를 '변환'이라는 버튼과 연결시켜줍니다. 창이 꺼지지 않고 계속 실행할 수 있게 mainloop를 지정합니다.<br>
+위의 코드를 실행시키면 아래와 같은 결과를 얻을 수 있습니다.<br>
+<img src="tkinter11_done.gif" width="600px"/>
+
+
 <h1>실습1-1:해달프렌즈 (해달,아리, 부기,사스미, 두근)사진 정리/색깔 각 캐릭터 RGB로 바꾸기<br>실습1-2:draw_shape 설명 더 추가<br>실습1-3:거북이 머리 가는방향대로 못할려나....<br></h1>
