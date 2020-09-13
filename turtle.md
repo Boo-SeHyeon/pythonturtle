@@ -296,7 +296,59 @@ done()
 <img src="turtle3_done.gif" width="600px"/>
 
 ### 3.3.1 'tkinter' 실습1
-### 3.3.2 'tkinter' 실습2
-### 3.3.3 'tkinter' 실습3
+
+```python
+from tkinter import*
+window=Tk()
+sum=100
+
+```
+'import*'로 tkinter 묘듈 전체를 가져와주고 윈도우창을 생성한후 전역변수 sum을 생성합니다.<br>
+```python
+def process1():
+	global sum
+	sum=sum+float(e1.get())
+	l2=Label(window,text=sum)
+	l2.grid(row=0,column=2)
+
+```
+전역변수 sum을 가져와 입력한 값(e1)을 더하여 더한결과를 가로로 0 세로로 2인 곳에 표시합니다.<br>process1함수로 더하기 기능을 만들어줍니다.<br>
+```python
+def process2():
+	global sum
+	sum=sum-float(e1.get())
+	l2=Label(window,text=sum)
+	l2.grid(row=0,column=2)
+```
+전역변수 sum을 가져와 입력한 값(e1)을 빼서 뺀 결과를 가로로 0 세로로 2인 곳에 표시합니다.<br>process2함수로 빼기 기능을 만들어줍니다.<br>
+```python
+def process3():
+	global sum
+	sum=100
+	l2=Label(window,text=sum)
+	l2.grid(row=0,column=2)
+```
+전역변수 sum을 가져와 초기화(다시 100으로)한후 가로로 0 세로로 2인 곳에 표시합니다.<br>process3함수로 초기화 기능을 만들어줍니다.<br>
+```python
+e1=Entry(window)
+e1.grid(row=1,column=0,columnspan=3)
+
+```
+숫자를 입력할 칸을 만들어줍니다.<br>
+```python
+b1=Button(window,text=”더하기(+)”,command=process1)
+b2=Button(window,text=”빼기(-)”,command=process2)
+b3=Button(window,text=”초기화”,command=process3)
+b1.grid(row=2,column=0)
+b2.grid(row=2,column=1)
+b3.grid(row=2,column=2)
+```
+이전에 만든 함수들을 이용하여 더하기, 빼기, 초기화 버튼을 생성한 후 배치합니다.<br>command를 이용해 아까 만든 함수와 버튼을 연결해줍니다.
+```python
+window.mainloop()
+```
+tkinter가 계속 실행할 수 있도록 mainloop를 지정합니다.mainloop는 창이 꺼지기전까지 계속 반복할 수 있게 해줍니다.<br>
+위의 코드를 실행하면 아래와 같은 결과창을 얻을 수 있습니다.<br>
+<img src="tkinter1_done.gif" width="600px"/>
 
 <h1>실습1-1:해달프렌즈 (해달,아리, 부기,사스미, 두근)사진 정리/색깔 각 캐릭터 RGB로 바꾸기<br>실습1-2:draw_shape 설명 더 추가<br>실습1-3:거북이 머리 가는방향대로 못할려나....<br></h1>
