@@ -102,7 +102,7 @@ drawSpecial(Ari,100,10)
 <img src="turtle1_Ari.jpg" width="500px"/><br>
 Haedal과 Ari를 기준으로 다른 turtle도 설정해줍니다.<br>
 이번엔 색상코드로 색을 지정해봅시다.<br>
-Bugi는 #2D905B, Saseumi는 #FF9908, Dugeun은 #FDD6E9로 진행합니다.Bugl를 예로 들면 Bugi.color('#2D905B')로 입력합니다.<br>
+Bugi는 #2D905B, <img src="bugi.jpg" width="500px"/><br>Saseumi는 #FF9908<img src="Saseumi.jpg" width="500px"/><br>, Dugeun은 #FDD6E9<img src="Dugeun.jpg" width="500px"/><br>로 진행합니다.Bugl를 예로 들면 Bugi.color('#2D905B')로 입력합니다.<br>
 각 결과값은 아래의 그림과 같이 나옵니다.<br>
 <img src="turtle1_Bugi.jpg" width="500px"/><br>
 <img src="turtle1_Saseumi.jpg" width="500px"/><br>
