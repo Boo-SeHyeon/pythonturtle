@@ -104,12 +104,12 @@ Haedal과 Ari를 기준으로 다른 turtle도 설정해줍니다.<br>
 이번엔 색상코드로 색을 지정해봅시다.<br>
 Bugi는 #2D905B, <img src="bugi.jpg" width="500px"/><br>Saseumi는 #FF9908<img src="Saseumi.jpg" width="500px"/><br>, Dugeun은 #FDD6E9<img src="Dugeun.jpg" width="500px"/><br>로 진행합니다.Bugl를 예로 들면 Bugi.color('#2D905B')로 입력합니다.<br>
 각 결과값은 아래의 그림과 같이 나옵니다.<br>
-<img src="turtle1_Bugi.jpg" width="500px"/><br>
-<img src="turtle1_Saseumi.jpg" width="500px"/><br>
-<img src="turtle1_Dugeun.jpg" width="500px"/><br>
+<img src="turtle1_Bugi.jpg" width="200px"/><br>
+<img src="turtle1_saseumi.jpg" width="200px"/><br>
+<img src="turtle1_Dugeun.jpg" width="200px"/><br>
 
 모든 코드를 이어붙여 동시에 실행하면 아래의 결과가 나옵니다.<br>
-<img src="turtle1_total.jpg" width="500px"/><br>
+<img src="turtle1_done.jpg" width="500px"/><br>
 
 
 ### 3.1.2 'turtle' 실습2
@@ -397,4 +397,4 @@ process함수를 '변환'이라는 버튼과 연결시켜줍니다. 창이 꺼�
 <img src="tkinter11_done.gif" width="600px"/>
 
 
-<h1>실습1-1:해달프렌즈 (해달,아리, 부기,사스미, 두근)사진 정리/색깔 각 캐릭터 RGB로 바꾸기<br>실습1-2:draw_shape 설명 더 추가<br>실습1-3:거북이 머리 가는방향대로 못할려나....<br></h1>
+
