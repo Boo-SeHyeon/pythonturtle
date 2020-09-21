@@ -71,7 +71,7 @@ drawSpecial(Haedal,100,10)
 ```
 "draqSpecial"함수에 Haedal, size와 repeat 값을 넣어주고 실행합니다.<br>
 아래의 그림과 같은 결과값이 나옵니다.<br>
-<img src="turtle1_Albert.jpg" width="500px"/><br>
+<img src="turtle1_Haedal.jpg" width="500px"/><br>
 ```python
 Ari = turtle.Turtle()
 Ari.speed(0)
@@ -99,12 +99,14 @@ drawSpecial(Ari,100,10)
 실행합니다.<br>
 
 아래의 그림과 같은 결과값이 나옵니다.<br>
-<img src="turtle1_Steve.jpg" width="500px"/><br>
+<img src="turtle1_Ari.jpg" width="500px"/><br>
 Haedal과 Ari를 기준으로 다른 turtle도 설정해줍니다.<br>
-Bugi는 초록색, Saseumi는 주황색, Dugeun은 분홍색으로 진행합니다.각 결과값은 아래의 그림과 같이 나옵니다.<br>
-<img src="turtle1_Barry.jpg" width="500px"/><br>
-<img src="turtle1_Terry.jpg" width="500px"/><br>
-<img src="turtle1_Will.jpg" width="500px"/><br>
+이번엔 색상코드로 색을 지정해봅시다.<br>
+Bugi는 #2D905B, Saseumi는 #FF9908, Dugeun은 #FDD6E9로 진행합니다.Bugl를 예로 들면 Bugi.color('#2D905B')로 입력합니다.<br>
+각 결과값은 아래의 그림과 같이 나옵니다.<br>
+<img src="turtle1_Bugi.jpg" width="500px"/><br>
+<img src="turtle1_Saseumi.jpg" width="500px"/><br>
+<img src="turtle1_Dugeun.jpg" width="500px"/><br>
 
 모든 코드를 이어붙여 동시에 실행하면 아래의 결과가 나옵니다.<br>
 <img src="turtle1_total.jpg" width="500px"/><br>
